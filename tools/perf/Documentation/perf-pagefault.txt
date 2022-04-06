@@ -1,0 +1,70 @@
+perf-pagefault(1)
+============
+
+NAME
+----
+perf-pagefault - Analyze pagefault events
+
+SYNOPSIS
+--------
+[verse]
+'perf pagefault' {record|report|script|info}
+
+DESCRIPTION
+-----------
+You can analyze various pagefault behaviours
+and statistics with this 'perf pagefault' command.
+
+  'perf pagefault record <command>' records pagefault events
+  between start and end <command>. And this command
+  produces the file "perf.data" which contains tracing
+  results of pagefault events.
+
+  'perf pagefault report' reports statistical data.
+
+  'perf pagefault script' shows raw pagefault events.
+
+  'perf pagefault info' shows metadata like threads or addresses
+  of pagefault instances.
+
+COMMON OPTIONS
+--------------
+
+-i::
+--input=<file>::
+        Input file name. (default: perf.data unless stdin is a fifo)
+
+-v::
+--verbose::
+        Be more verbose (show symbol address, etc).
+
+-D::
+--dump-raw-trace::
+        Dump raw trace in ASCII.
+
+-f::
+--force::
+	Don't complain, do it.
+
+REPORT OPTIONS
+--------------
+
+-k::
+--key=<value>::
+        Sorting key. Possible values: acquired (default), contended,
+	avg_wait, wait_total, wait_max, wait_min.
+
+INFO OPTIONS
+------------
+
+-t::
+--threads::
+	dump thread list in perf.data
+
+-m::
+--map::
+	dump map of pagefault instances (address:name table)
+
+SEE ALSO
+--------
+linkperf:perf[1]

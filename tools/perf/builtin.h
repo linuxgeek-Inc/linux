@@ -30,6 +30,7 @@ int cmd_version(int argc, const char **argv);
 int cmd_probe(int argc, const char **argv);
 int cmd_kmem(int argc, const char **argv);
 int cmd_lock(int argc, const char **argv);
+int cmd_pagefault(int argc, const char **argv);
 int cmd_kvm(int argc, const char **argv);
 int cmd_test(int argc, const char **argv);
 int cmd_trace(int argc, const char **argv);
