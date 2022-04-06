@@ -18,6 +18,7 @@ perf-y += builtin-top.o
 perf-y += builtin-script.o
 perf-y += builtin-kmem.o
 perf-y += builtin-lock.o
+perf-y += builtin-pagefault.o
 perf-y += builtin-kvm.o
 perf-y += builtin-inject.o
 perf-y += builtin-mem.o
